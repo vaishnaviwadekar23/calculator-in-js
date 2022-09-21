@@ -1,0 +1,54 @@
+<html>
+   <head>
+   	  <meta charset="utf-8">
+   	  <meta name="viewport" content="width=device-width,inital-scale=1.0">
+       <title>calculator</title>
+       <link rel="stylesheet" href="calcss.css">
+   </head>
+   <style>
+   </style>
+   <body>
+    	<div>
+    		<centre>
+    			<input type="text" id="id1"><br>
+    			<button type="button" onclick="cal(1)">1</button>
+    			<button type="button" onclick="cal(2)">2</button>
+    			<button type="button" onclick="cal(3)">3</button>
+    			<button type="button" onclick="cal('+')">+</button>
+    			<br>
+    			<button type="button" onclick="cal(4)">4</button>
+    			<button type="button" onclick="cal(5)">5</button>
+    			<button type="button" onclick="cal(6)">6</button>
+    			<button type="button" onclick="cal('-')">-</button>
+    			<br>
+    			<button type="button" onclick="cal(7)">7</button>
+    			<button type="button" onclick="cal(8)">8</button>
+    			<button type="button" onclick="cal(9)">9</button>
+    			<button type="button" onclick="cal('*')">*</button>
+    			<br>
+    			<button type="button" onclick="cal('c')">c</button>
+    			<button type="button" onclick="cal(0)">0</button>
+    			<button type="button" onclick="cal('/')">/</button>
+    			<button type="button" onclick="cal('=')">=</button>
+    		</centre>
+    	</div>
+    	<script>
+    		function cal(i)
+    		{
+    			x=i;
+    			if(x==='=')
+    			{
+    				document.getElementById('id1').value=eval(document.getElementById('id1').value);
+    			}
+    			else if(x==='c')
+    			{
+    				document.getElementById('id1').value="";
+                }
+                else
+                {
+                	document.getElementById('id1').value+=i;
+                }
+    		}
+    	</script>
+    </body>
+    </html>						
